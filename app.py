@@ -1,13 +1,20 @@
+from dotenv import dotenv_values
 from flask import Flask, request
 
 app = Flask(__name__)
 
+
+# env constants
+ENV = dotenv_values(".env")
+ROOT_URL = ENV["ROOT_URL"]
+
+# route constants
 HOME_ROUTE_NAME = ""
 BRUH_ROUTE_NAME = "bruh"
 SHOOT_ROUTE_NAME = "shoot"
-HOME_ROUTE = "/{url}".format(url=HOME_ROUTE_NAME)
-BRUH_ROUTE = "/{url}".format(url=BRUH_ROUTE_NAME)
-SHOOT_ROUTE = "/{url}".format(url=SHOOT_ROUTE_NAME)
+HOME_ROUTE = "{root}{url}".format(url=HOME_ROUTE_NAME, root=ROOT_URL)
+BRUH_ROUTE = "{root}{url}".format(url=BRUH_ROUTE_NAME, root=ROOT_URL)
+SHOOT_ROUTE = "{root}{url}".format(url=SHOOT_ROUTE_NAME, root=ROOT_URL)
 
 
 @app.route(HOME_ROUTE)

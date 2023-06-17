@@ -14,6 +14,8 @@ playin around with flasssssssk
 * install pre-commit hooks
   * `pre-commit install`
     * make sure your venv is activated when you run this
+* populate your `.env` file
+  * run `cp .env-template .env` to get a `.env` file populated with keys that need their values added
 
 ## Run
 * `flask --app app run --debug`
@@ -51,3 +53,7 @@ playin around with flasssssssk
 ### mypy
   * static typing
   * [GitHub](https://github.com/python/mypy#mypy-static-typing-for-python)
+
+### python-dotenv
+  * env var management
+  * [GitHub](https://github.com/theskumar/python-dotenv#python-dotenv)
