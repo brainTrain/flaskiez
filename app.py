@@ -1,6 +1,6 @@
 import json
-import urllib.request
 
+import requests
 from dotenv import dotenv_values
 from flask import Flask, request
 
@@ -64,9 +64,26 @@ def shoot():
 
 @app.route(QUOTE_ROUTE)
 def quote():
+    data_1 = get_cat_facts()
+    data_2 = get_dad_joke()
+
+    return {"data 1": data_1, "data 2": data_2}
+
+
+def get_cat_facts():
     url = "https://catfact.ninja/fact"
-    response = urllib.request.urlopen(url)
-    data_response = response.read()
+    response = requests.get(url)
+
+    data_response = response.text
+    data = json.loads(data_response)
+
+    return data
+
+
+def get_dad_joke():
+    url = "https://icanhazdadjoke.com/"
+    response = requests.get(url, headers={"Accept": "application/json"})
+    data_response = response.text
     data = json.loads(data_response)
 
     return data

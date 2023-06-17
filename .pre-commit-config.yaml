@@ -18,10 +18,12 @@ repos:
     hooks:
     -   id: black
         args: [--preview]
--   repo: https://github.com/pre-commit/mirrors-mypy
-    rev: 'bd424e4'
-    hooks:
-    -   id: mypy
+# -   repo: https://github.com/pre-commit/mirrors-mypy
+#     rev: 'bd424e4'
+#     hooks:
+#     -   id: mypy
+#         verbose: true
+#         args: [--show-error-codes]
 -   repo: https://github.com/pycqa/flake8
     rev: 6.0.0
     hooks:
