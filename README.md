@@ -36,7 +36,7 @@ playin around with flasssssssk
 
 ### isort
   * code formatter that sorts imports based on PEP8 rules
-  * [GITHUB](HTTPS://GITHUB.COM/PYCQA/ISORT)
+  * [GitHub](HTTPS://GITHUB.COM/PYCQA/ISORT)
 
 ### Flake8
   * linter
