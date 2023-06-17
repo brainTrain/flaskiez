@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # env constants
 ENV = dotenv_values(".env")
-ROOT_URL = ENV["ROOT_URL"]
+ROOT_URL = ENV.get("ROOT_URL", "/")
 
 # route constants
 HOME_ROUTE_NAME = ""
