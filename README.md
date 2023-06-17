@@ -13,7 +13,13 @@ playin around with flasssssssk
   * `pip install -r requirements.txt`
 
 ## Run
-* `flask --app app run`
+* `flask --app app run --debug`
+
+## Troubleshooting
+
+### Access Denied fro running flask server
+* try `chrome://net-internals/#sockets` to clear local browser data for that url
+  * [source](https://www.reddit.com/r/flask/comments/ttawkw/comment/iqrz3jw/)
 
 ## Pre commit stuffs
 * Black
