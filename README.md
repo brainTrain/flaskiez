@@ -11,6 +11,9 @@ playin around with flasssssssk
   * `deactivate`
 * install dependencies
   * `pip install -r requirements.txt`
+* install pre-commit hooks
+  * `pre-commit install`
+    * make sure your venv is activated when you run this
 
 ## Run
 * `flask --app app run --debug`
@@ -22,13 +25,16 @@ playin around with flasssssssk
   * [source](https://www.reddit.com/r/flask/comments/ttawkw/comment/iqrz3jw/)
 
 ## Pre commit stuffs
-* Black
-* Flake8
-* Isort
-* Mypy
+* install pre-commit hooks
+  * `pre-commit install`
+    * make sure your venv is activated when you run this
+  * do this every time you update the `.pre-commit-config.yaml` file
 
 ## Tools
 
+### pre-commit
+  * gives yaml configurable pre-commit hook to add processers/parsers on commit
+  * [GitHub](https://github.com/pre-commit/pre-commit#pre-commit)
 
 ### Black
   * code formatter based on PEP8 rules

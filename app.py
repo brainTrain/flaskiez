@@ -17,4 +17,10 @@ def hello_world():
 
 @app.route(BRUH_ROUTE)
 def oh():
-    return {"oh": "no"}
+    return {
+        "oh": (
+            "no--------- 00000000 0000000000"
+            "0000000000 ooooooooooooooooooooooooooo"
+            " oooooooooooooooooooooooo"
+        )
+    }
