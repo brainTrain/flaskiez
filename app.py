@@ -2,7 +2,7 @@ import json
 
 import requests
 from dotenv import dotenv_values
-from flask import Flask, request
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -23,20 +23,15 @@ QUOTE_ROUTE = "{root}{url}".format(url=QUOTE_ROUTE_NAME, root=ROOT_URL)
 
 
 @app.route(HOME_ROUTE)
-def hello_world():
-    return (
-        "<main><p>Hello, World!</p>"
-        "<section><a href={bruh_url}>{bruh_name}</a></section>"
-        "<section><a href={shoot_url}?name=oic>{shoot_name}</a></section>"
-        "<section><a href={quote_url}>{quote_name}</a></section>"
-        "</main>".format(
-            bruh_url=BRUH_ROUTE,
-            bruh_name=BRUH_ROUTE_NAME,
-            shoot_name=SHOOT_ROUTE_NAME,
-            shoot_url=SHOOT_ROUTE,
-            quote_url=QUOTE_ROUTE,
-            quote_name=QUOTE_ROUTE_NAME,
-        )
+def home():
+    return render_template(
+        "index.html",
+        bruh_url=BRUH_ROUTE,
+        bruh_name=BRUH_ROUTE_NAME,
+        shoot_name=SHOOT_ROUTE_NAME,
+        shoot_url=SHOOT_ROUTE,
+        quote_url=QUOTE_ROUTE,
+        quote_name=QUOTE_ROUTE_NAME,
     )
 
 
